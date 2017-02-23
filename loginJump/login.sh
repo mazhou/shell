@@ -6,7 +6,7 @@ target_server=$3
 target_pwd=$4
 
 /usr/bin/expect -c "
-    spawn ssh -o StrictHostKeyChecking=no $jump_user@xxx.xxx.xxx.xx -p 60022;
+    spawn ssh -o StrictHostKeyChecking=no $jump_user@jumpserverip -p jumpserverport;
     set timeout 10;
     expect \"*assword*\";
     send \"$jump_pwd\r\";
