@@ -1,0 +1,12 @@
+1   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['USERID']);
+2   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['POLICYID']);
+3   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['POLICYPARAM']);
+4   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['STARTTIME']);
+5   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['ENDTIME']);
+6   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['STOCKSET']);
+7   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['ISTEST']);
+8   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['STATUS']);
+9   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['FALG']);
+10   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['REMARK']);
+11   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['SUBSCRBLE']);
+12   $("<td></td>").appendTo(tr).text(this.policy_list_body[elm]['PNAME'
