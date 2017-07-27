@@ -1,5 +1,18 @@
 # shell
 <pre>
+curl 'http://stats.webp2p.le.com:20080/query/table_all_share?type=min&from=Wed%20Mar%2001%202017%2008:00:00%20GMT+0800%20(CST)&to=Thu%20Mar%2002%202017%2008:00:00%20GMT+0800%20(CST)&typVar=-1&verVar=-1&idcVar=-1&gid=-1&terminalId=-1&platid=-1&splatid=501&appid=-1&methods=-1&p=-1&sid=-1&table_all_share=1&p1=undefined&p2=undefined' \
+-H 'Cookie: sso_curr_country=US; language=en-us; tj_uuid=-_14979538462220435445; tj_lc=bbfa8751c44ebe2a40d2bbc5c67f26fc; tj_env=1; ark_uuid=92a9c6baa04c4284b7546d7218208e9d; bd_xid=bbfa8751c44ebe2a40d2bbc5c67f26fc; tj_v2c=-864922_1; unLogPlayTime=1; ssoCookieSynced=1; sID=SESS_656151_90; user=zhangsan; authorized=true; Secure' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,la;q=0.4' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-H 'Accept: application/json, text/javascript, */*; q=0.01' \
+-H 'Referer: http://stats.webp2p.le.com:20080/main' \
+-H 'X-Requested-With: XMLHttpRequest' \
+-H 'Connection: keep-alive' --compressed
+</pre>
+
+<pre>
 eg1:
 sed =  test.txt|grep 'parse get data:'|tee test2.txt
 #test.txt file 
