@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip_csv="serverIp.csv"
+ip_csv="./asset/xshellIP.csv"
 
 
 if [ $# == 0 ];then
