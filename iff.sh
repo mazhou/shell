@@ -1,4 +1,27 @@
-# shell
+#!/bin/sh
+
+str1="aaa"
+str2="aaa"
+
+if [ "$str1" = "$str2" ]; then
+	echo "equal"
+else
+	echo "not equal"
+fi
+
+num1=1
+num2=1
+if [ $num1 -eq $num2 ]; then
+	echo "equal"
+else
+	echo "not equal"
+fi
+
+if [ -e iff1.sh ]; then
+	echo "equal"
+else
+	echo "not equal"
+fi
 
 # 字符串比较运算符 （请注意引号的使用，这是防止空格扰乱代码的好方法）
 # -z string: 如果 string长度为零，则为真 [ -z "$myvar" ]

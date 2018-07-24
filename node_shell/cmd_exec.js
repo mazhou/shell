@@ -1,3 +1,4 @@
+//js 通过调用curl 命令下载数据
 var exec = require('child_process').exec; 
 var cmdStr = 'curl http://www.weather.com.cn/data/sk/101010100.html';
 exec(cmdStr, function(err,stdout,stderr){
