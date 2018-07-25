@@ -1,1 +1,0 @@
-sed -n '{1!G; h; $p; }' new.txt

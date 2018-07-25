@@ -1,11 +1,7 @@
 <pre>
-create ip list
-:node createIP.js
+alias mzlogin=/Users/zhouma/workspace/workspace_shell/loginJump/login.sh
+mzlogin show
+mzlogin add
 
-xshell import the list file
-
-sh jump.sh
-sh jump.sh show
-sh jump.sh ip
 </pre>
 
