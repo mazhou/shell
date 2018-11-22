@@ -5,7 +5,7 @@ data="/asset1"
 ip_csv=$rootPath$data"/xshellIP.csv"
 # echo $ip_csv
 if [ $# == 0 ];then
-    echo "请输入登录IP,你可以通过 show 显示IP,可以通过 add 添加IP"
+    echo "请输入登录IP,你可以通过 show [过滤内容] 显示IP,可以通过 add 添加IP"
     exit 0
 fi
 
@@ -18,15 +18,16 @@ if [ "$1" == "show" ]; then
         ip2="$(grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' <<< "$2")"
         if [ "$ip2" == "" ];then
             #显示IP全部信息，匹配可能的IP地址
+            
             while IFS=, read ip port user pswd desc inIp inPort
             do
                 if test "${ip#*$2}" != "$ip"
                 then
-                    echo "$desc $ip:$port"
+                    echo "$desc $ip : $port  $inIp"
                 fi
                 if test "${desc#*$2}" != "$desc"
                 then
-                    echo "$desc $ip:$port"
+                    echo "$desc  $ip : $port  $inIp"
                 fi
             done < $ip_csv
         else
@@ -36,7 +37,7 @@ if [ "$1" == "show" ]; then
             do
                 if test "${ip#*$2}" != "$ip"
                 then
-                    echo "$desc $ip:$port $pswd $inIp $inPort"
+                    echo "$desc $ip:$port $pswd $inIp $inIp"
                     break    # $substring is in $string
                 fi
             done < $ip_csv
@@ -45,13 +46,13 @@ if [ "$1" == "show" ]; then
         #显示ip简短信息  127.0.0.1 80 root password 备注
         while IFS=, read ip port user pswd desc inIp inPort 
         do
-            
-            if [ -z "$port" ];then
-                echo "$desc $ip"
-            elif [ "$port" == "80" ];then
-                echo "$desc $ip"
+            if [ -z "$port" ];
+            then
+                echo "$desc  $ip  $inIp"
+            # elif [ "$port" == "80" ];then
+            #     echo "$desc  $ip  $inIp"
             else
-                echo "$desc $ip:$port "
+                echo "$desc  $ip : $port  $inIp"
             fi
             
         done < $ip_csv
